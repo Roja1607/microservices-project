@@ -6,7 +6,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker build -t Roja1607/emailservice:latest ."
+                        sh "docker build -t roja1607/emailservice:latest ."
                     }
                 }
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 script {
                     withDockerRegistry(credentialsId: 'docker-cred', toolName: 'docker') {
-                        sh "docker push Roja1607/emailservice:latest "
+                        sh "docker push roja1607/emailservice:latest "
                     }
                 }
             }
